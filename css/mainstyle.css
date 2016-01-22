@@ -486,14 +486,21 @@ img {
 /* page style */
 .content-nodata {
   width: 100%;
-  height: 100%;
+  height: 1.85rem;
   background: url(../images/icon-header.png) center center no-repeat;
   -webkit-background-size: 2.54rem 1.85rem;
   background-size: 2.54rem 1.85rem;
   text-align: center;
   font-size: 0.36rem;
   color: #333;
-  padding-top: 6.5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+}
+
+.content-nodata p:nth-child(1) {
+  padding-top: 2rem;
 }
 
 .content-nodata .nodata-txt span {
@@ -620,6 +627,232 @@ img {
 
 .content-wrap .item-dl .item-dd .dd-right .font-color02 {
   color: #a0a0a0;
+}
+
+.new-body {
+  overflow: hidden;
+}
+
+.new-wrap {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  color: #000;
+}
+
+.new-wrap .new-header {
+  width: 100%;
+  height: 0.98rem;
+  background-color: #ffa733;
+  overflow: hidden;
+}
+
+.new-wrap .new-header .header-left {
+  line-height: 0.98rem;
+  float: left;
+  width: 50%;
+  color: #fff;
+  font-size: 0.36rem;
+  padding-left: 0.2rem;
+}
+
+.new-wrap .new-header .header-right {
+  line-height: 0.4rem;
+  float: right;
+  width: auto;
+  height: 0.4rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  font-size: 0.2rem;
+  background-color: #ee6d1a;
+  border-radius: 0.2rem;
+  color: #fff;
+  text-align: center;
+  margin-right: 0.2rem;
+  margin-top: 0.29rem;
+}
+
+.new-wrap .new-title {
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+.new-wrap .new-title .title-top {
+  padding-top: 0.3rem;
+  overflow: hidden;
+}
+
+.new-wrap .new-title .title-top .top-left {
+  float: left;
+  width: 1.72rem;
+  height: 1.72rem;
+  border: 0.04rem solid #fff;
+}
+
+.new-wrap .new-title .title-top .top-right {
+  float: left;
+  font-size: 0.42rem;
+  width: 4.08rem;
+  padding-left: 0.2rem;
+  height: 1.72rem;
+  overflow: hidden;
+  line-height: 0.59rem;
+}
+
+.new-wrap .new-title .title-msg {
+  line-height: 0.6rem;
+  font-size: 0.2rem;
+  color: #666;
+}
+
+.new-wrap .new-title .title-msg span {
+  padding-right: 0.1rem;
+}
+
+.new-wrap .new-title .title-content {
+  font-size: 0.3rem;
+  text-align: justify;
+  padding-bottom: 0.2rem;
+  word-break: break-word;
+  line-height: 0.48rem;
+}
+
+.new-wrap .new-comment {
+  width: 100%;
+  height: 3.16rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0.02rem 0.05rem 0.02rem #999;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  font-size: 0.24rem;
+}
+
+.new-wrap .new-comment .comment-msg {
+  color: #999;
+  line-height: 0.8rem;
+}
+
+.new-wrap .new-comment .comment-txt:nth-child(1) {
+  width: 2.8rem;
+}
+
+.new-wrap .new-comment .comment-txt:nth-child(2) {
+  width: 2.7rem;
+}
+
+.new-wrap .new-comment .comment-txt:nth-child(3) {
+  width: 2.15rem;
+}
+
+.new-wrap .new-comment .comment-txt:nth-child(4) {
+  width: 1.7rem;
+}
+
+.new-wrap .new-comment .comment-txt:nth-child(5) {
+  width: 1.55rem;
+}
+
+.new-wrap .new-comment .comment-txt:nth-child(6) {
+  width: 1.05rem;
+}
+
+.new-wrap .new-comment .comment-txt:nth-child(7) {
+  width: 4.43rem;
+}
+
+.new-wrap .new-comment .addcolor {
+  color: #fff;
+  background: #ee6d1a;
+}
+
+.new-wrap .new-comment .comment-txt {
+  border: 0.02rem solid #ccc;
+  height: 0.49rem;
+  line-height: 0.49rem;
+  display: inline-block;
+  padding-left: 0.24rem;
+  padding-right: 0.24rem;
+  border-radius: 0.24rem;
+  float: left;
+  text-align: center;
+  margin-bottom: 0.3rem;
+  position: relative;
+}
+
+.new-wrap .new-comment .comment-txt .dz {
+  -webkit-transition: all 2s ease-out;
+  width: 0.76rem;
+  height: 0.98rem;
+  background: url(../images/icon-liu.png) center center no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+
+.new-wrap .new-comment .m-r {
+  margin-right: 0.1rem;
+}
+
+.new-wrap .new-ewm {
+  width: 100%;
+  height: 3.77rem;
+  background-color: #f5f5f5;
+  padding-bottom: 0.88rem;
+  -webkit-box-shadow: 0 0.02rem 0.05rem 0.02rem #999;
+}
+
+.new-wrap .new-ewm .ewm-msg {
+  font-size: 0.20rem;
+  color: #999;
+  padding-top: 0.22rem;
+  padding-bottom: 0.35rem;
+  text-align: center;
+}
+
+.new-wrap .new-ewm .ewm-box {
+  overflow: hidden;
+  width: 100%;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+
+.new-wrap .new-ewm .ewm-box .left {
+  float: left;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.new-wrap .new-ewm .ewm-box .right {
+  float: left;
+  width: 4.2rem;
+  padding-left: 0.36rem;
+  padding-top: 0.15rem;
+}
+
+.new-wrap .new-ewm .ewm-box .right .right-txt {
+  font-size: 0.36rem;
+  color: #333333;
+  display: block;
+  line-height: 0.56rem;
+}
+
+.new-footer {
+  width: 100%;
+  height: 0.88rem;
+  background-color: #0aadee;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  line-height: 0.88rem;
+  text-align: center;
+  font-size: 0.42rem;
+  color: #fff;
+  -webkit-box-shadow: 0 -0.05rem 0.08rem #999;
 }
 
 /* popbox style */

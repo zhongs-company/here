@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telephone = no" />
+		<title>here</title>
+		<link rel="stylesheet" type="text/css" href="css/mainstyle.css" />
+	</head>
+
+	<body class="new-body">
+
+		<div class="new-wrap" id="scrollable">
+			<div class="new-header">
+				<span class="header-left">在这儿大事件</span>
+				<span class="header-right">已有<em>12964</em>次评论</span>
+			</div>
+			<div class="new-title">
+				<div class="title-top">
+					<img src="images/header.jpg" class="top-left" />
+					<div class="top-right">梁小同学成功占领武汉威斯汀酒店现任店主</div>
+				</div>
+				<div class="title-msg"><span>在这儿日报</span><span>01-21</span><span>12:26</span></div>
+				<div class="title-content">昨晚，央视春晚官方微博发布了2016猴年春博发布了2016猴年春博发布了2016猴年春晚吉祥物“康康”，并附上“简历”。“康康”原稿用了中国传统水墨画的形式，设计者是韩美林，</div>
+			</div>
+			<div class="new-comment">
+				<div class="comment-msg">对于此事件,你的观点是:</div>
+				<div class="comment-box">
+					<span class="comment-txt m-r">土豪我爱你，呵呵 </span>
+					<span class="comment-txt">很不错啊!</span>
+					<span class="comment-txt m-r">牛逼的人生</span>
+					<span class="comment-txt m-r">我看行</span>
+					<span class="comment-txt">呵呵</span>
+					<span class="comment-txt m-r">逗</span>
+					<span class="comment-txt">很不错啊!很不错啊!很不错啊!</span>
+				</div>
+			</div>
+			<div class="new-ewm">
+				<div class="ewm-msg">以上内容纯属虚构,如有雷同,怎么可能</div>
+				<div class="ewm-box">
+					<img src="images/ewm.jpg" alt="" class="left" />
+					<div class="right">
+						<span class="right-txt">长按关注“ 在这儿摇”</span>
+						<span class="right-txt">将高调装逼进行到底！</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="new-footer">我也要玩玩</div>
+		<script src="https://wximg.gtimg.com/shake_tv/include/js/lib/jquery.2.1.1.min.js"></script>
+		<script src="js/scrollfix.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//iphone上下滚动bug
+			var scrollable = document.getElementById("scrollable");
+			new ScrollFix(scrollable);
+			$(document).on('touchstart', '.comment-box .comment-txt', function() {
+				ani.init($(this));
+			})
+			var ani = {
+				init: function(obj) {
+					_this = this;
+					this.obj = obj;
+					this.width = this.obj.width();
+					this.clickColor(_this.obj, 'addcolor');
+					this.creatDz();
+				},
+				clickColor: function(obj, cla) {
+					obj.addClass(cla);
+					setTimeout(function() {
+						obj.removeClass(cla)
+					}, 200)
+				},
+				data: {
+					style: 'dz',
+					height: 400
+				
+				},
+				creatDz: function() {
+					var oz = document.createElement('div');
+					oz.classList.add(this.data.style);
+					this.obj[0].appendChild(oz);
+					this.run(oz);
+				},
+				run: function(oz) {
+					var speedy = -(this.data.height / 64) + 'rem';
+					var speedx = (this.roundNum(0, this.width) / 64) + 'rem';
+					setTimeout(function() {
+						oz.style.cssText = '-webkit-transform:translate3d(' + speedx + ',' + speedy + ',0); opacity:0;';
+					}, 100)
+					oz.addEventListener('webkitTransitionEnd', function() {
+						this.parentNode.removeChild(this);
+					})
+				},
+				roundNum: function(n, m) {
+					return Math.floor(Math.random() * (m - n + 1) + n);
+				}
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,11 +1,17 @@
 
 
 .content-nodata{
-    @include ele-box(100%, 100%);
+
+    @include ele-box(100%, 1.85rem);
     @include bg-image(null, url(../images/icon-header.png), center, center, no-repeat, 2.54rem 1.85rem); 
     @include text-set(center, 0.36rem, #333);
-    padding-top:6.5rem;
-    
+    position: absolute;
+    left:50%;
+    top:50%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    p:nth-child(1){
+        padding-top:2rem;
+    }
     .nodata-txt{
         span{
             @include text-set(center, 0.6rem, #ee6d1a);
