@@ -1,0 +1,26 @@
+%flex-box{
+  display: -webkit-box;
+  display: flex;
+  // main axis
+  -webkit-box-pack:center;
+  justify-content:center;
+  // cross axis
+  -webkit-box-align:center;
+  align-items:center;
+}
+
+%flex-box-main{
+  display: -webkit-box;
+  display: flex;
+  // main axis
+  -webkit-box-pack:center;
+  justify-content:center;
+}
+
+%flex-box-cross{
+  display: -webkit-box;
+  display: flex;
+  // cross axis
+  -webkit-box-align:center;
+  align-items:center;
+}

@@ -1,0 +1,105 @@
+
+
+.content-nodata{
+    @include ele-box(100%, 100%);
+    @include bg-image(null, url(../images/icon-header.png), center, center, no-repeat, 2.54rem 1.85rem); 
+    @include text-set(center, 0.36rem, #333);
+    padding-top:6.5rem;
+    
+    .nodata-txt{
+        span{
+            @include text-set(center, 0.6rem, #ee6d1a);
+        }
+    }
+}
+
+
+.content-wrap{
+    @include padding(0, 1.56rem, 0, 0);
+    @include ele-box(100%, 100%);
+    background-color:#fff;
+    overflow:auto;
+    .item-dl{
+        width:100%;
+        .item-dt{
+            @include ele-box(0.63rem, 0.31rem);
+            @include text-set(center, 0.2rem, #fff);
+            @include rounded-corner(0.15rem);
+            @include margin(0.15rem, 0, 0.2rem, 0);
+            line-height: 0.31rem;
+            background-color:#ffa733;          
+        }
+ 
+        .item-dd{
+            width:100%;
+            height:auto;
+            @include padding(0.35rem, 0.35rem, 0, 0);
+            overflow: hidden;
+            font-size: 0.24rem;
+            position: relative;
+            &:before{
+                content: '';
+                @include ele-box(0.08rem, 100%);
+                background-color:#ffa733;
+                position: absolute;
+                left:0.5rem;
+                top:0;
+            }
+
+            .dd-left{
+                @include ele-box(0.70rem, 0.77rem);
+                @include bg-image(null, url(../images/icon01.png), left, bottom, no-repeat, 100% auto); 
+                position: absolute;
+                left:0.20rem;
+                top:0.4rem;
+            }
+            .dd-center{
+                @include ele-box(100%, auto);
+                padding-left:1.17rem;
+                padding-right:1.50rem;
+                word-break: break-all;
+                text-align: justify;
+                h3{ font-size:0.36rem; color:#ffa733; line-height: 0.40rem; }
+                h4{ font-size:0.24rem; color:#000; line-height: 0.40rem; }
+            }
+            .dd-right{
+                @include ele-box(1.50rem, 0.74rem);
+                position: absolute;
+                right:0;
+                top:0.4rem;
+                text-align: right;
+                padding-right:0.2rem;
+                .dd-right-icon{
+                    display: inline-block;
+                    vertical-align:top;
+                }
+                
+                .dd-right-imga{
+                    @include ele-box(0.20rem, 0.74rem);
+                    @include bg-image(null, url(../images/icon-prosen01.png), left, bottom, no-repeat, 100% auto);            
+                }
+                .dd-right-imgb{
+                    @include ele-box(0.18rem, 0.70rem);
+                    @include bg-image(null, url(../images/icon-prosen02.png), left, bottom, no-repeat, 100% auto);                     
+                }
+ 
+                .dd-right-txt{       
+                    font-size:0.48rem;
+                    line-height: 0.74rem;
+                }
+                .font-color01{
+                    color:#ee6d1a;
+                }
+                
+                .font-color02{
+                   color:#a0a0a0; 
+                }
+            }
+        }
+    }
+} 
+
+
+
+
+

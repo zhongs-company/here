@@ -1,0 +1,47 @@
+/* css reset */
+@import "base/_reset.scss";
+
+/* common variables placeholders and minxins */
+@import "helpers/_variables.scss";
+@import "helpers/_mixins.scss";
+@import "helpers/_placeholders.scss";
+
+/* main structure */
+@import "layout/_structure.scss";
+@import "layout/_main_footer.scss";
+@import "layout/_main_header.scss";
+@import "layout/_lead_pop.scss";
+
+/* page style */
+@import "pages/_main.scss";
+ 
+ 
+/* popbox style */
+@import "components/_popbox.scss";
+
+/* media query */
+@media screen and (min-width: 320px) {
+    html {font-size: 50px;}
+}
+ 
+@media screen and (min-width: 360px) {
+    html {font-size: 56px;}
+}
+ 
+@media screen and (min-width: 400px) {
+    html {font-size: 63px;}
+}
+ 
+@media screen and (min-width: 440px) {
+    html {font-size: 69px;}
+}
+ 
+@media screen and (min-width: 480px) {
+    html {font-size: 75px;}
+}
+ 
+@media screen and (min-width: 640px) {
+    html {font-size: 100px;}
+}
+
+html {font-size: 15.625vw;}

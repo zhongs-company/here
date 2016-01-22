@@ -1,0 +1,62 @@
+@mixin rounded-corner($arc){
+  -webkit-border-radius: $arc;
+          border-radius: $arc;
+}
+
+@mixin bg-image($bgcolor:null,$src:null,$posx:0,$posy:0,$bgrepeat:no-repeat,$bgse:100%){
+    background: $bgcolor $src $posx $posy $bgrepeat;
+    -webkit-background-size: $bgse;
+            background-size: $bgse;
+}
+
+@mixin ele-transform($transform:null,$transformX:null,$transformY:null,$transformZ:null){
+  @if $transform == translate {
+    -webkit-transform: translate($transformX,$transformY);
+    transform: translate($transformX,$transformY);
+  }
+  @if $transform == rotate {
+    -webkit-transform: rotate($transformX);
+    transform: rotate($transformX);
+  }
+  @if $transform == scale {
+    -webkit-transform: scale($transformX,$transformY);
+    transform: scale($transformX,$transformY);
+  }
+}
+
+@mixin ele-pos($pos:absolute,$top:0,$left:0,$zindex:null,$right:null,$bottom:null){
+  position:$pos;
+  top:$top;
+  right:$right;
+  bottom:$bottom;
+  left:$left;
+  z-index:$zindex;
+}
+
+@mixin ele-box($width:null,$height:null,$display:null,$margin:null){
+  width:$width;
+  height:$height;
+  display:$display;
+  margin:$margin;
+}
+
+@mixin text-set(
+  $text-align:null,
+  $fontSize:null,
+  $color:null,
+  $whiteSpace:null,
+  $overflow:null){
+  text-align: $text-align;
+  font-size: $fontSize;
+  color: $color;
+  white-space: $whiteSpace;
+  overflow: $overflow;
+}
+
+@mixin margin($t:null, $b:null, $l:null, $r:null) {
+    margin: $t $r $b $l;
+}
+
+@mixin padding($t:null, $b:null, $l:null, $r:null) {
+    padding:$t $r $b $l;
+}

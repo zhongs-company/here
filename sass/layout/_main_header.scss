@@ -1,0 +1,84 @@
+.header-top{
+    position: relative;
+    @include ele-box(100%, auto);
+    background-color:#ffa733;
+    padding-bottom:0.3rem;
+    padding-top:0.3rem;
+    margin-bottom:0.3rem;
+    z-index: 999;
+    &:after{
+        @include ele-box(100%, 0.2rem);
+        @include bg-image(null, url(../images/layout-line.png), left, bottom, no-repeat, 100% auto); 
+        content:'';
+        position:absolute;
+        bottom:-0.18rem;
+        left:0;
+    }
+    
+    .top-wrap{
+        @include ele-box(100%, 0.72rem);
+        @include text-set(center, 0.36rem, null, null, hidden);
+        line-height:0.72rem;
+      
+        .wrap-left{
+            -webkit-border-top-right-radius: 0.36rem;
+            -webkit-border-bottom-right-radius: 0.36rem;
+            width:2.7rem;
+            float: left;
+            background-color:#fed299;
+            color:#ffa733;
+        }
+        .wrap-center{
+            @include ele-box(0.8rem, 0.8rem);
+            @include bg-image(null, url(../images/btn-ewm.png), center, center, no-repeat, 0.52rem 0.52rem); 
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .wrap-right{
+            color:#ffa733;
+            float: right;
+            width:2.7rem;
+            -webkit-border-top-left-radius: 0.36rem;
+            -webkit-border-bottom-left-radius: 0.36rem;
+            background-color:#fed299;
+        }
+        
+        .curren-color{
+            background-color:#ee6d1a;
+            color:#fff;            
+        }
+    }
+    
+    .bottom-wrap{
+        @include ele-box(100%, auto);
+        @include padding(0.3rem, 0, 0, 0);
+        @include text-set(left, null, #fff, null, hidden);
+        padding-left:0.3rem;
+        position: relative;
+        .wrap-img{
+            @include ele-box(0.56rem, 0.56rem);
+            @include rounded-corner(50%);
+            margin-top:0.1rem;
+            border:0.06rem solid #fff;
+            float:left;
+            overflow: hidden;
+            background-color:#fff;
+            img{ width:100%; height:100%; vertical-align:middle;}
+        }
+        .img-msg{
+            @include ele-box(0.4rem, 0.4rem);
+            @include ele-pos(absolute, 0.3rem, 0.7rem, null);
+            background-color:#ee6d1a;
+            line-height: 0.4rem;
+            border-radius: 50%;
+            @include text-set(center, 0.2rem, #fff);    
+        }
+        .wrap-txt{
+            float:left;
+            padding-left:0.5rem;
+            h3{ font-size:0.36rem; line-height: 0.4rem;}
+            h4{ font-size:0.24rem; line-height: 0.4rem; }
+        }
+    }
+    
+}
