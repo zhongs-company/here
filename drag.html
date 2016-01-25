@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<style type="text/css">
+		.drag{
+			width:100px;
+			height:100px;
+			background: red;
+			position: absolute;
+			top:50%;
+			left:50%;
+			margin-top:-50px;
+			margin-left:-50px; 
+		}
+	</style>
+	<body>
+		
+		<div class="drag"></div>
+		
+		
+		<script type="text/javascript">
+			window.onload=function(){
+				var obj = document.querySelector('.drag');
+				
+				obj.addEventListener('touchstart',function(e){
+					
+					e.preventDefault();
+					
+					yStart = e.touches[0].pageY;
+					
+
+					
+					obj.addEventListener('touchmove',function(e){
+						e.preventDefault();
+						x = e.touches[0].pageX;
+						y = e.touches[0].pageY;
+						obj.style.left = x +'px';
+						obj.style.top = y +'px';	
+					},false);
+					
+					
+				},false);
+				
+				obj.addEventListener('touchend',function(e){
+					
+					yEnd = e.touches[0].pageY;
+					console.log(yEnd)
+					
+					
+					//hideDiv( yStart, yEnd, document.querySelector('.drag')  )
+					
+				},false);
+				
+				function hideDiv(first, last, obj){
+					
+					if( first < last ){
+						
+						obj.style.display = 'none';
+						
+					}
+					
+				}
+				
+			} 
+		</script>
+	</body>
+</html> 

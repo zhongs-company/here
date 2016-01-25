@@ -312,6 +312,18 @@ img {
   color: #fff;
 }
 
+.header-top .bottom-wrap .btn-msg {
+  position: absolute;
+  right: 0.2rem;
+  top: 0.67rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-image: url(../images/icon-btn.png);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .header-top .bottom-wrap .wrap-txt {
   float: left;
   padding-left: 0.5rem;
@@ -325,6 +337,42 @@ img {
 .header-top .bottom-wrap .wrap-txt h4 {
   font-size: 0.24rem;
   line-height: 0.4rem;
+  overflow: hidden;
+}
+
+.header-top .bottom-wrap .wrap-txt h4 p {
+  float: left;
+  font-size: 0.24rem;
+  color: #fff;
+  line-height: 0.45rem;
+}
+
+.header-top .bottom-wrap .wrap-txt h4 p .manor-num {
+  padding-left: 0.08rem;
+  padding-right: 0.08rem;
+  border-right: 0.02rem solid #ffdcad;
+}
+
+.header-top .bottom-wrap .wrap-txt h4 p .money-txt {
+  padding-left: 0.08rem;
+}
+
+.header-top .bottom-wrap .wrap-txt h4 p .money-num {
+  padding-left: 0.37rem;
+  position: relative;
+}
+
+.header-top .bottom-wrap .wrap-txt h4 p .money-num:after {
+  content: '';
+  position: absolute;
+  background-image: url(../images/icon-money.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  width: 0.29rem;
+  height: 0.29rem;
+  top: 0;
+  left: 0.04rem;
 }
 
 .lead-wrap {

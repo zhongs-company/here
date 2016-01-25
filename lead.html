@@ -34,6 +34,30 @@
 			<div class="item-iocn03"></div>
 			<img src="images/ewm.jpg" alt="" class="ewm" />
 		</div>
+
+
+		<script>
+
+
+				var str = "12 31钟 23123 ";
+
+				function lastStr(str){
+					var zz = /[\u4e00-\u9fa5]/g;
+
+					var b =	str.match(zz);
+
+					if( b !== null ){
+						
+						var c = b[b.length - 1];
+
+						return c;
+					
+					}
+				}
+
+console.log(lastStr( str ))
+				lastStr( str )
+		</script>
 		
 	</body>
 </html>
